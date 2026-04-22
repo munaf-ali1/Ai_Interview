@@ -66,8 +66,9 @@ function Step1SetUp({ onStart }) {
            onStart(result.data)
 
         } catch (error) {
-            console.log(error)
-            setLoading(false)
+            console.error("Error from server:", error.response?.data || error.message);
+            alert(error.response?.data?.message || "Something went wrong! Please try again.");
+            setLoading(false);
         }
     }
     return (
