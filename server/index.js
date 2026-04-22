@@ -10,8 +10,12 @@ import interviewRouter from "./routes/interview.route.js"
 import paymentRouter from "./routes/payment.route.js"
 
 const app = express()
+// app.use(cors({
+//     origin: [process.env.CLIENT_URL, "http://localhost:5173"],
+//     credentials:true
+// }))
 app.use(cors({
-    origin: [process.env.CLIENT_URL, "http://localhost:5173"],
+    origin: [process.env.CLIENT_URL, "http://localhost:5173", "https://ai-interview-frontend-g7gp.onrender.com"],
     credentials: true
 }))
 
